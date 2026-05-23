@@ -4,7 +4,7 @@ const DB_URL = process.env.DATABASE_URL;
 
 const connectDB = async () => {
   try {
-    connectDB = await mongoose.connect(DB_URL);
+    const connection = await mongoose.connect(DB_URL);
 
     console.log("Database connected");
   } catch (error) {
